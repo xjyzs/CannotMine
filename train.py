@@ -346,15 +346,15 @@ def main():
     # 配置参数
     config = {
         "data_file": "arknights.csv",
-        "batch_size": 1024,
-        "test_size": 0.1,
+        "batch_size": 128,
+        "test_size": 0.05,
         "embed_dim": 256,
         "n_layers": 3,
         "num_heads": 4,
-        "dropout": 0.3,  # Dropout 设置
+        "dropout": 0.5,  # Dropout 设置
         "lr": 3e-4,  # 新优化器可以改大一点
         "lion_lr": 3e-4 / 10,  # 论文指出 Lion 优化器需要更小的学习率
-        "epochs": 50,
+        "epochs": 300 ,
         "seed": 42,  # 随机数种子
         "save_dir": "models",  # 存到哪里
         "max_feature_value": 100,  # 限制特征最大值，防止极端值造成不稳定
